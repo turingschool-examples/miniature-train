@@ -46,6 +46,14 @@ RSpec.describe Item do
       expect(@item1.current_high_bid).to eq(22)
     end
   end
+
+  describe '#close_bidding' do
+    it 'changes open status to false & ends bid acceptence' do
+      @item1.close_bidding
+
+      expect(@item1.add_bid(@bidder2, 20)).to eq("Bidding closed on this item.")
+    end
+  end
 end
 
  

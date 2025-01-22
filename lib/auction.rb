@@ -36,4 +36,6 @@ class Auction
     end
     return names
   end
+
+  
 end
