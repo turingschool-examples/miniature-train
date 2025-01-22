@@ -109,33 +109,33 @@ pry(main)> auction.add_item(item4)
 
 pry(main)> auction.add_item(item5)
 
-pry(main)> item1.bids
+#pry(main)> item1.bids
 #=> {}
 
-pry(main)> item1.add_bid(attendee2, 20)
+#pry(main)> item1.add_bid(attendee2, 20)
 
-pry(main)> item1.add_bid(attendee1, 22)
+#pry(main)> item1.add_bid(attendee1, 22)
 
-pry(main)> item1.bids
+#pry(main)> item1.bids
 #=> {
 #     #<Attendee:0x00007fdc071131c8 ...> => 20,
 #     #<Attendee:0x00007fdc088f0e08 ...> => 22
 #   }
 
-pry(main)> item1.current_high_bid
+#pry(main)> item1.current_high_bid
 #=> 22
 
-pry(main)> item4.add_bid(attendee3, 50)
+#pry(main)> item4.add_bid(attendee3, 50)
 
-pry(main)> auction.unpopular_items
+#pry(main)> auction.unpopular_items
 #=> [#<Item:0x00007fdc07925280 ...>, #<Item:0x00007fdc071ab040 ...>, #<Item:0x00007fdc071695f0 ...>]
 
-pry(main)> item3.add_bid(attendee2, 15)
+#pry(main)> item3.add_bid(attendee2, 15)
 
-pry(main)> auction.unpopular_items
+#pry(main)> auction.unpopular_items
 #=> [#<Item:0x00007fdc07925280 ...>, #<Item:0x00007fdc071695f0 ...>]
 
-pry(main)> auction.potential_revenue
+#pry(main)> auction.potential_revenue
 #=> 87
 
 ```
