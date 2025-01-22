@@ -45,11 +45,24 @@ RSpec.describe Auction do
   
   describe '#unpopular_items' do
     it 'returns array of items with no bids' do
-      
+      @auction.add_item(@item1)
+      @auction.add_item(@item2)
+      @item1.add_bid(@attendee2, 20)
+      @item1.add_bid(@attendee1, 22)
+
+      expect(@auction.unpopular_items).to eq([@item2])
     end
   end
 
   describe '#potential_revenue' do
-    it 'totals highest bids across all items.'
+    it 'totals highest bids across all items.' do
+      @auction.add_item(@item1)
+      @auction.add_item(@item2)
+      @item1.add_bid(@attendee2, 20)
+      @item2.add_bid(@attendee1, 22)
+
+      expect(@auction.potential_revenue).to eq(42)
+    end
   end
 end
+

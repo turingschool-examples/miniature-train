@@ -7,15 +7,10 @@ class Item
   end
 
   def add_bid(bidder, bid)
-    if bidder.budget >= bid
-      @bids[bidder] => bid 
-    end
+    @bids[bidder] = bid 
   end
 
   def current_high_bid
-    amounts = []
-    @bids.max_by do |key, value|
-      value
-    end
+    @bids.values.max
   end
 end
