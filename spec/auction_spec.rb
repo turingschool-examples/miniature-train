@@ -64,5 +64,17 @@ RSpec.describe Auction do
       expect(@auction.potential_revenue).to eq(42)
     end
   end
+
+  describe '#bidders' do
+    it 'returns array of bidders names' do
+      @auction.add_item(@item1)
+      @auction.add_item(@item2)
+      @item1.add_bid(@attendee2, 20)
+      @item2.add_bid(@attendee1, 22)
+
+      expect(@auction.bidders).to eq(['Bob','Megan'])
+
+    end
+  end
 end
 
