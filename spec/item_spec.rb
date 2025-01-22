@@ -35,6 +35,7 @@ RSpec.describe Item do
 
 
       expect(@item1.bids).to eq({@bidder2 => 20, @bidder1 => 22})
+      expect(@bidder1.items).to eq([@item1])
     end
   end
 

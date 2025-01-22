@@ -37,5 +37,19 @@ class Auction
     return names
   end
 
+  def bidder_items(attendee)
+    bids = []
+    bids.each do |item, bidders|
+      bidders.each do |bidder|  #if statement is weird
+        if bidder == attendee   #maybe not even possible to access item from where I'm trying to add it
+          bids << item
+        end
+      end
+    end
+    return bids
+  end
+
+
+
   
 end

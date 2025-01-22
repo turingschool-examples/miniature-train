@@ -9,7 +9,8 @@ class Item
 
   def add_bid(bidder, bid)
     if @open == true
-      @bids[bidder] = bid 
+      @bids[bidder] = bid
+      bidder.items << Item
     else
       "Bidding closed on this item."
     end

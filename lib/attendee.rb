@@ -1,8 +1,9 @@
 class Attendee
-  attr_reader :name, :budget
+  attr_reader :name, :budget, :items
 
   def initialize(info)
     @name = info[:name]
     @budget = info[:budget].delete('$').to_i
+    @items = []
   end
 end
